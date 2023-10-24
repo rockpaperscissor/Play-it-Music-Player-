@@ -1,0 +1,164 @@
+*,
+*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    
+    font-family: Chewy;
+}
+.main-div{
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(245, 245, 231);
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+.music-container{
+    width: 25%;
+    height:70%;
+    background-color: #fefafa;
+    border-radius: 48% 52% 50% 50% / 63% 64% 36% 37% ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ;
+    padding:2% ;
+    text-align:center ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.music-container #title{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: #171717;
+    
+    margin: 2rem 0 0 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow:0 0.3rem 0.5rem rgba(0,0,0,0.3);
+    white-space: nowrap; 
+
+}
+.music-container #artist{
+    color: #cccaca;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+.img-container{
+    width: 55%;
+    height: 40%;
+    
+
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+}
+.music-controls{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 4rem;
+
+    
+}
+.music-controls .fa-solid{
+    font-size: 2rem;
+    color:hsl(181, 50%, 42%);
+    cursor: pointer;
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+}
+.music-controls .main-button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #d0cece;
+    color: rgb(87, 137, 169);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.music-controls .fa-solid:hover{
+    
+    color: grey;
+    
+}
+.music-controls .fa-play:hover{
+    background-color: rgb(244, 158, 172);
+    box-shadow:0 1rem 2rem 0.2rem rgba(0,0,0,0.4);
+}
+.anime{
+    animation: rotatePlayer 3s linear infinite ;
+
+}
+@keyframes rotatePlayer {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+    
+}
+
+/* Base styles for screens wider than 600px */
+/* Your existing CSS code */
+
+@media (max-width: 600px), (max-height: 600px) {
+    /* Styles for screens with a width or height of 600px or less */
+    .music-container {
+      width: 50%; /* Adjust the width for smaller screens */
+      height: 50%; /* Adjust the height for smaller screens */
+      /* Adjust other styles as needed for smaller screens */
+    }
+  
+    .music-container #title {
+      font-size: 1.5rem; /* Reduce the font size for smaller screens */
+      /* Adjust other styles as needed for smaller screens */
+    }
+  
+    .music-container #artist {
+      font-size: 1.2rem; /* Reduce the font size for smaller screens */
+      /* Adjust other styles as needed for smaller screens */
+    }
+  
+    .img-container {
+      width: 50%; /* Adjust the width for smaller screens */
+      height: 35%; /* Adjust the height for smaller screens */
+      /* Adjust other styles as needed for smaller screens */
+    }
+    .music-controls{
+        width: 70%;
+        margin-top: 2rem;
+    
+        
+    }
+    .music-controls .main-button{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        
+        
+        font-size: 1rem;
+    }
+    .music-controls .fa-solid{
+        font-size: 1rem;
+        
+    }
+  
+    /* Adjust other styles within media queries as needed for smaller screens */
+  }
+  
